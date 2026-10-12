@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chloe Couzens | Performance coach for young people</title>
+<meta name="description" content="Chloe Couzens coaches children and young adults towards high performance by starting with who they are. Former teacher of 18 years, Loughborough graduate, hockey player and Team GB athlete.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%23FF5A1F'/%3E%3C/svg%3E">
+<style>
+:root{
+  --paper:#F2EDE4;
+  --paper-2:#E8E1D4;
+  --ink:#14110F;
+  --ink-2:#2A2520;
+  --muted:#6E665C;
+  --spark:#FF5A1F;
+  --spark-deep:#D93E08;
+  --volt:#E4FF3A;
+  --line:rgba(20,17,15,.16);
+  --line-dark:rgba(242,237,228,.18);
+  --display:"Bricolage Grotesque", "Georgia", serif;
+  --serif:"Instrument Serif", "Georgia", serif;
+  --mono:"JetBrains Mono", ui-monospace, monospace;
+  --gutter:clamp(16px, 4vw, 56px);
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);font-size:18px;line-height:1.5;overflow-x:hidden;font-variation-settings:"wdth" 100}
+a{color:inherit}
+::selection{background:var(--spark);color:var(--paper)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+em,.it{font-family:var(--serif);font-style:italic;font-weight:400}
+
+/* placeholders for Chloe to fill in */
+.todo{background:var(--volt);outline:1px dashed var(--ink);padding:0 .25em;font-family:var(--mono);font-size:.72em;font-style:normal;letter-spacing:0;text-transform:none;color:var(--ink);border-radius:2px}
+.dark .todo{outline-color:var(--paper)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px var(--gutter);mix-blend-mode:difference;color:#fff;pointer-events:none}
+.nav>*{pointer-events:auto}
+.wordmark{font-weight:700;font-size:20px;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.wordmark i{width:12px;height:12px;border-radius:50%;background:#fff;display:inline-block;animation:pulse 2.4s var(--ease) infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.5)}}
+.nav ul{list-style:none;display:flex;gap:28px}
+.nav a{text-decoration:none}
+.nav ul a{position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav ul a:hover::after{transform:scaleX(1)}
+@media (max-width:720px){.nav ul li:not(:last-child){display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:1fr auto;column-gap:16px;padding:120px var(--gutter) 40px;overflow:hidden}
+#field{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero>*:not(canvas){position:relative;z-index:1}
+.hero h1{grid-column:1 / span 11;align-self:center;font-size:clamp(46px,8.6vw,148px);line-height:.92;font-weight:700;letter-spacing:-.045em;font-variation-settings:"wdth" 82;pointer-events:none}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line>span{display:inline-block;transform:translateY(105%);animation:rise 1.1s var(--ease) forwards}
+.hero h1 .line:nth-child(2)>span{animation-delay:.12s}
+.hero h1 .line:nth-child(3)>span{animation-delay:.24s}
+.hero h1 .line:nth-child(4)>span{animation-delay:.36s}
+@keyframes rise{to{transform:none}}
+.hero h1 .quiet{color:var(--muted);font-weight:500}
+.see{position:relative;display:inline-block;color:var(--spark);font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;padding:0 .08em}
+.see svg{position:absolute;left:-12%;top:-6%;width:124%;height:118%;overflow:visible}
+.see path{fill:none;stroke:var(--spark);stroke-width:3;stroke-linecap:round;stroke-dasharray:640;stroke-dashoffset:640;animation:draw 1.4s 1.2s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero-foot{grid-column:1 / -1;display:grid;grid-template-columns:repeat(12,1fr);column-gap:16px;align-items:end;border-top:1px solid var(--line);padding-top:20px;opacity:0;animation:fade 1s .9s forwards}
+@keyframes fade{to{opacity:1}}
+.hint{grid-column:1 / span 4;color:var(--muted);display:flex;gap:10px;align-items:center}
+.hint b{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--spark);box-shadow:0 0 0 0 var(--spark);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(255,90,31,0)}100%{box-shadow:0 0 0 0 rgba(255,90,31,0)}}
+.hero-foot p{grid-column:6 / span 5;font-size:clamp(17px,1.4vw,20px);max-width:44ch}
+.down{grid-column:12;justify-self:end;width:56px;height:56px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;text-decoration:none;transition:background .3s,color .3s,transform .3s var(--ease)}
+.down:hover{background:var(--ink);color:var(--paper);transform:translateY(4px)}
+@media (max-width:860px){
+  .hero h1{grid-column:1 / -1}
+  .hero-foot{row-gap:18px}
+  .hint{grid-column:1 / -1;order:2}
+  .hero-foot p{grid-column:1 / span 10}
+  .down{grid-column:11 / span 2;width:48px;height:48px}
+}
+
+/* marquee */
+.marquee{background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;border-block:1px solid var(--ink)}
+.marquee .track{display:inline-flex;animation:slide 38s linear infinite;padding:16px 0}
+.marquee span{font-size:clamp(20px,2.4vw,32px);font-weight:600;letter-spacing:-.02em;padding-right:28px;display:inline-flex;align-items:center;gap:28px;font-variation-settings:"wdth" 85}
+.marquee span::after{content:"";width:14px;height:14px;background:var(--spark);border-radius:50%}
+.marquee span:nth-child(3n)::after{background:var(--volt)}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* shared section */
+section{padding:clamp(80px,12vw,180px) var(--gutter)}
+.label{display:flex;gap:14px;align-items:baseline;margin-bottom:clamp(32px,5vw,64px)}
+.label .n{color:var(--spark)}
+.dark{background:var(--ink);color:var(--paper)}
+.dark .muted{color:#A79E92}
+
+html.js [data-reveal]{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+html.js [data-reveal].in{opacity:1;transform:none}
+
+/* the premise */
+.premise{display:grid;grid-template-columns:repeat(12,1fr);column-gap:16px}
+.premise .label{grid-column:1 / -1}
+.premise h2{grid-column:1 / span 10;font-size:clamp(34px,5.4vw,88px);line-height:1;letter-spacing:-.035em;font-weight:600;font-variation-settings:"wdth" 88}
+.premise h2 .strike{position:relative;color:var(--muted)}
+.premise h2 .strike::after{content:"";position:absolute;left:-2%;right:-2%;top:54%;height:.08em;background:var(--spark);transform:scaleX(0);transform-origin:left;transition:transform .9s .4s var(--ease)}
+.premise h2.in .strike::after{transform:scaleX(1)}
+.premise .cols{grid-column:5 / span 7;margin-top:clamp(40px,6vw,80px);display:grid;grid-template-columns:1fr 1fr;gap:32px;font-size:19px}
+@media (max-width:860px){.premise h2{grid-column:1 / -1}.premise .cols{grid-column:1 / -1;grid-template-columns:1fr}}
+
+/* about / numbers */
+.about{display:grid;grid-template-columns:repeat(12,1fr);column-gap:16px;row-gap:0}
+.about .label{grid-column:1 / -1}
+.about .intro{grid-column:1 / span 5;align-self:start;position:sticky;top:100px}
+.about .intro h2{font-size:clamp(40px,5vw,76px);line-height:.95;letter-spacing:-.04em;font-weight:700;font-variation-settings:"wdth" 80;margin-bottom:28px}
+.about .intro p{max-width:40ch;margin-bottom:16px}
+.ledger{grid-column:7 / span 6;list-style:none;border-top:1px solid var(--line-dark)}
+.ledger li{border-bottom:1px solid var(--line-dark);padding:32px 0;display:grid;grid-template-columns:auto 1fr;column-gap:28px;align-items:start}
+.ledger .big{font-size:clamp(64px,8vw,128px);line-height:.8;font-weight:800;letter-spacing:-.06em;font-variation-settings:"wdth" 75;color:var(--paper);min-width:2ch}
+.ledger .big.spark{color:var(--spark)}
+.ledger h3{font-size:22px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
+.ledger p{color:#C9C0B4;font-size:16px;max-width:42ch}
+.ticks{grid-column:1 / -1;display:grid;grid-template-columns:repeat(18,1fr);gap:4px;margin-top:20px}
+.ticks i{height:28px;background:var(--ink-2);border-radius:2px;transform-origin:bottom;transition:background .3s}
+.ledger li.in .ticks i{background:var(--spark);animation:tick .5s var(--ease) both}
+@keyframes tick{from{transform:scaleY(.15)}}
+.ticks-key{grid-column:1 / -1;display:flex;justify-content:space-between;margin-top:8px;color:#8B8277}
+@media (max-width:860px){.about .intro,.ledger{grid-column:1 / -1}.about .intro{position:static;margin-bottom:48px}}
+
+/* method */
+.method .label{margin-bottom:24px}
+.method h2{font-size:clamp(36px,5vw,80px);line-height:1;letter-spacing:-.035em;font-weight:600;max-width:16ch;margin-bottom:clamp(48px,7vw,100px);font-variation-settings:"wdth" 88}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.steps li{position:relative;padding:28px 24px 40px 0;border-right:1px solid var(--line);margin-right:24px;transition:transform .5s var(--ease)}
+.steps li:last-child{border-right:0;margin-right:0}
+.steps li:nth-child(2){margin-top:60px}
+.steps li:nth-child(3){margin-top:120px}
+.steps li:nth-child(4){margin-top:180px}
+.steps .num{font-family:var(--mono);font-size:13px;color:var(--spark);display:block;margin-bottom:56px}
+.steps h3{font-size:clamp(28px,2.6vw,40px);letter-spacing:-.03em;line-height:1;font-weight:700;margin-bottom:16px}
+.steps p{font-size:17px;color:var(--ink-2);max-width:30ch}
+.steps li::before{content:"";position:absolute;top:-2px;left:0;height:2px;width:0;background:var(--spark);transition:width .6s var(--ease)}
+.steps li:hover::before{width:100%}
+.flame{display:block;width:22px;height:22px;border-radius:50%;background:var(--ink);margin-bottom:24px;transition:transform .5s var(--ease),background .3s}
+.steps li:nth-child(1) .flame{transform:scale(.35)}
+.steps li:nth-child(2) .flame{transform:scale(.6)}
+.steps li:nth-child(3) .flame{transform:scale(.85);background:var(--spark)}
+.steps li:nth-child(4) .flame{transform:scale(1.2);background:var(--spark);box-shadow:0 0 0 8px rgba(255,90,31,.18),0 0 0 18px rgba(255,90,31,.08)}
+.steps li:hover .flame{transform:scale(1.5);background:var(--spark)}
+@media (max-width:960px){
+  .steps{grid-template-columns:1fr 1fr}
+  .steps li{margin-top:0!important;margin-right:0;padding-right:20px;border-right:0;border-bottom:1px solid var(--line)}
+  .steps li:nth-child(odd){border-right:1px solid var(--line);margin-right:20px}
+}
+@media (max-width:560px){.steps{grid-template-columns:1fr}.steps li:nth-child(odd){border-right:0;margin-right:0}.steps .num{margin-bottom:24px}}
+
+/* who */
+.who{background:var(--paper-2)}
+.who h2{font-size:clamp(36px,5vw,80px);letter-spacing:-.035em;line-height:1;font-weight:600;margin-bottom:clamp(40px,6vw,80px);font-variation-settings:"wdth" 88}
+.rows{list-style:none;border-top:1px solid var(--ink)}
+.rows li{border-bottom:1px solid var(--ink)}
+.rows button{all:unset;cursor:pointer;width:100%;display:grid;grid-template-columns:80px 1fr 48px;align-items:center;padding:clamp(18px,2.4vw,30px) 0;box-sizing:border-box}
+.rows button:focus-visible{outline:2px solid var(--spark);outline-offset:4px}
+.rows .k{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.rows .t{font-size:clamp(30px,4.6vw,72px);letter-spacing:-.04em;line-height:1;font-weight:700;font-variation-settings:"wdth" 80;transition:transform .5s var(--ease),color .3s}
+.rows .plus{justify-self:end;width:40px;height:40px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-size:22px;transition:transform .5s var(--ease),background .3s,color .3s}
+.rows button:hover .t{transform:translateX(16px);color:var(--spark)}
+.rows li.open .plus{transform:rotate(45deg);background:var(--spark);border-color:var(--spark);color:var(--paper)}
+.rows .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.rows li.open .body{grid-template-rows:1fr}
+.rows .body>div{overflow:hidden}
+.rows .body p{padding:0 0 32px 80px;max-width:calc(80px + 52ch);font-size:19px}
+@media (max-width:560px){.rows button{grid-template-columns:44px 1fr 44px}.rows .body p{padding-left:44px}}
+
+/* quote */
+.quote{display:grid;grid-template-columns:repeat(12,1fr);column-gap:16px;align-items:end}
+.quote blockquote{grid-column:2 / span 9;font-family:var(--serif);font-size:clamp(34px,5vw,80px);line-height:1.04;letter-spacing:-.01em}
+.quote blockquote::before{content:"\201C";display:block;font-size:2.4em;line-height:.6;color:var(--spark)}
+.quote cite{grid-column:2 / span 9;margin-top:32px;font-style:normal}
+@media (max-width:860px){.quote blockquote,.quote cite{grid-column:1 / -1}}
+
+/* belief */
+.belief{position:relative;overflow:hidden;min-height:90svh;display:flex;flex-direction:column;justify-content:center}
+.belief h2{font-size:clamp(44px,9vw,160px);line-height:.88;letter-spacing:-.055em;font-weight:800;font-variation-settings:"wdth" 75;position:relative;z-index:1}
+.belief h2 .w{display:inline-block;transition:color .4s,transform .4s var(--ease)}
+.belief h2 .w:hover{color:var(--spark);transform:translateY(-.06em) rotate(-2deg)}
+.belief p{margin-top:40px;max-width:46ch;margin-left:auto;font-size:19px;position:relative;z-index:1}
+.glow{position:absolute;width:60vmax;height:60vmax;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.55),rgba(255,90,31,0) 60%);left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;transition:left .8s var(--ease),top .8s var(--ease);filter:blur(10px)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(12,1fr);column-gap:16px;row-gap:40px}
+.contact .label{grid-column:1 / -1;margin-bottom:0}
+.contact h2{grid-column:1 / span 8;font-size:clamp(48px,8vw,136px);line-height:.9;letter-spacing:-.05em;font-weight:700;font-variation-settings:"wdth" 78}
+.contact .side{grid-column:9 / span 4;align-self:end}
+.contact .side p{margin-bottom:20px}
+.cta{display:inline-flex;align-items:center;gap:14px;background:var(--spark);color:var(--ink);text-decoration:none;font-weight:700;font-size:20px;padding:18px 26px;border-radius:999px;position:relative;overflow:hidden;transition:transform .4s var(--ease)}
+.cta::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .5s var(--ease)}
+.cta:hover{color:var(--paper)}
+.cta:hover::before{transform:none}
+.cta>*{position:relative}
+.cta svg{transition:transform .4s var(--ease)}
+.cta:hover svg{transform:translateX(6px) rotate(-45deg)}
+@media (max-width:860px){.contact h2,.contact .side{grid-column:1 / -1}}
+
+footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);color:var(--muted)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .hero h1 .line>span{transform:none}
+  [data-reveal]{opacity:1;transform:none}
+  .marquee .track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="wordmark" href="#top"><i></i>Chloe Couzens</a>
+  <ul class="mono">
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#chloe">About</a></li>
+    <li><a href="#who">Who it's for</a></li>
+    <li><a href="#talk">Talk to Chloe</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+<header class="hero">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <h1>
+    <span class="line"><span>Every young person</span></span>
+    <span class="line"><span>carries a spark.</span></span>
+    <span class="line"><span class="quiet">Most are waiting for</span></span>
+    <span class="line"><span class="quiet">someone to</span>&nbsp;<span class="see">see<svg viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M30 18 C80 -4 178 6 192 46 C204 84 120 102 60 92 C10 84 -6 50 20 26 C40 10 90 6 120 10"/></svg></span><span>&nbsp;it.</span></span>
+  </h1>
+  <div class="hero-foot">
+    <span class="hint mono"><b></b><span id="hintText">Move your cursor. Watch who lights up.</span></span>
+    <p>Chloe Couzens is a performance coach for children and young adults. She works on the thing underneath the results, which is whether a young person feels properly known.</p>
+    <a class="down" href="#premise" aria-label="Scroll to the next section">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2v14M3 10l6 6 6-6"/></svg>
+    </a>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Eighteen years in the classroom</span><span>Loughborough University</span><span>Hockey</span><span>Team GB</span><span>Performance coach</span><span>Children and young adults</span>
+    <span>Eighteen years in the classroom</span><span>Loughborough University</span><span>Hockey</span><span>Team GB</span><span>Performance coach</span><span>Children and young adults</span>
+  </div>
+</div>
+
+<section class="premise" id="premise">
+  <div class="label mono"><span class="n">01</span><span>The premise</span></div>
+  <h2 data-reveal>You can't <span class="strike">shout</span> motivation into a fourteen-year-old. It turns up when they feel understood, and then it tends to stay.</h2>
+  <div class="cols">
+    <p data-reveal>Most of the advice aimed at young people is about effort. Try harder, want it more, push through. Some of them can. A lot of them hear it as proof that the adult in front of them hasn't been paying attention.</p>
+    <p data-reveal>Chloe's coaching starts further back. Before any talk of goals or training plans, she wants to know who this person is when nobody is grading them, and what they care about badly enough to get up early for. The performance work is built on top of that answer.</p>
+  </div>
+</section>
+
+<section class="about dark" id="chloe">
+  <div class="label mono"><span class="n">02</span><span>Chloe</span></div>
+  <div class="intro">
+    <h2>She has been the athlete and <em>the teacher.</em></h2>
+    <p>Chloe has seen high performance from both sides. As an athlete she knows what it is like to be pushed, selected, dropped and pushed again. As a teacher she spent eighteen years working out why one bright kid flies while the one next to them stops bothering.</p>
+    <p class="muted">Now she coaches young people one to one, and works with the families, schools and clubs around them. <span class="todo">[CHLOE: a line in your own words about why now]</span></p>
+  </div>
+  <ol class="ledger">
+    <li data-reveal>
+      <span class="big spark">18</span>
+      <div>
+        <h3>Years teaching</h3>
+        <p>Eighteen years of classrooms, form groups and parents' evenings. <span class="todo">[CHLOE: subject, age range, schools]</span></p>
+      </div>
+      <div class="ticks" aria-hidden="true"></div>
+      <div class="ticks-key mono" aria-hidden="true"><span>Year 1</span><span>Year 18</span></div>
+    </li>
+    <li data-reveal>
+      <span class="big">GB</span>
+      <div>
+        <h3>Team GB athlete</h3>
+        <p>Competed at international level for Great Britain. <span class="todo">[CHLOE: sport, event, years, caps]</span></p>
+      </div>
+    </li>
+    <li data-reveal>
+      <span class="big">LU</span>
+      <div>
+        <h3>Loughborough University</h3>
+        <p>Studied at Loughborough University, a place that takes sport very seriously indeed. <span class="todo">[CHLOE: degree and year]</span></p>
+      </div>
+    </li>
+    <li data-reveal>
+      <span class="big">XI</span>
+      <div>
+        <h3>Hockey</h3>
+        <p>Eleven a side, which matters here. Chloe knows how a dressing room can lift a quiet player, and how it can flatten one. <span class="todo">[CHLOE: clubs and level]</span></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="method" id="approach">
+  <div class="label mono"><span class="n">03</span><span>How it works</span></div>
+  <h2>Four stages. The first one takes longest, <em>on purpose.</em></h2>
+  <ol class="steps">
+    <li data-reveal>
+      <span class="num">01 / Notice</span><span class="flame"></span>
+      <h3>See them</h3>
+      <p>Early sessions are mostly listening. What do they light up about? When do they go quiet? What do they say about themselves that isn't true?</p>
+    </li>
+    <li data-reveal>
+      <span class="num">02 / Name</span><span class="flame"></span>
+      <h3>Find the thing</h3>
+      <p>Together they put words to what actually drives this young person. It often surprises the adults around them.</p>
+    </li>
+    <li data-reveal>
+      <span class="num">03 / Strike</span><span class="flame"></span>
+      <h3>Light it</h3>
+      <p>Small goals the young person picks for themselves, set just out of reach. The first win counts for more than its size.</p>
+    </li>
+    <li data-reveal>
+      <span class="num">04 / Sustain</span><span class="flame"></span>
+      <h3>Keep it lit</h3>
+      <p>Selection days, exams, injuries, bad weeks. They rehearse the moments that usually put the fire out, so those moments lose some of their power.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="who" id="who">
+  <div class="label mono"><span class="n">04</span><span>Who it's for</span></div>
+  <h2>Some of the people Chloe works with</h2>
+  <ul class="rows">
+    <li>
+      <button aria-expanded="false"><span class="k">A</span><span class="t">Young athletes</span><span class="plus" aria-hidden="true">+</span></button>
+      <div class="body"><div><p>Talented, training hard and somehow stuck. Or fifteen and already tired of a sport they used to love. Chloe has been that athlete, so she doesn't need it explained.</p></div></div>
+    </li>
+    <li>
+      <button aria-expanded="false"><span class="k">B</span><span class="t">Students</span><span class="plus" aria-hidden="true">+</span></button>
+      <div class="body"><div><p>The capable ones who coast, and the anxious ones who overwork. Both are usually missing the same thing, a reason that belongs to them.</p></div></div>
+    </li>
+    <li>
+      <button aria-expanded="false"><span class="k">C</span><span class="t">Parents</span><span class="plus" aria-hidden="true">+</span></button>
+      <div class="body"><div><p>You can see what they could do. They can't hear it from you right now, and that is completely normal. Sometimes it needs to come from someone outside the house.</p></div></div>
+    </li>
+    <li>
+      <button aria-expanded="false"><span class="k">D</span><span class="t">Schools and clubs</span><span class="plus" aria-hidden="true">+</span></button>
+      <div class="body"><div><p>Sessions for teachers and coaches on reading what drives the young people in front of them. <span class="todo">[CHLOE: confirm what you offer here, e.g. INSET days, coach workshops]</span></p></div></div>
+    </li>
+  </ul>
+</section>
+
+<section class="quote">
+  <blockquote data-reveal><span class="todo">[A line from a former pupil, athlete or parent, used with their permission]</span></blockquote>
+  <cite class="mono" data-reveal><span class="todo">[Name, and how they know Chloe]</span></cite>
+</section>
+
+<section class="belief dark" id="belief">
+  <div class="glow" id="glow"></div>
+  <div class="label mono" style="position:relative;z-index:1"><span class="n">05</span><span>What sits under all of it</span></div>
+  <h2 id="beliefLine">Being seen changes how hard you're willing to try.</h2>
+  <p>Chloe watched this happen in classrooms for eighteen years and felt it herself in a GB shirt. Young people go further for the adults who have bothered to understand them. Her coaching is built around being that adult, for long enough that they learn to do it for themselves.</p>
+</section>
+
+<section class="contact" id="talk">
+  <div class="label mono"><span class="n">06</span><span>Talk to Chloe</span></div>
+  <h2>Start with a <em>conversation.</em></h2>
+  <div class="side">
+    <p>A first call is free and has no agenda. Tell Chloe about the young person you have in mind and she'll be honest about whether she can help.</p>
+    <p class="mono" style="color:var(--muted)">Based in <span class="todo">[area]</span>. In person and online <span class="todo">[confirm]</span>.</p>
+    <a class="cta" href="mailto:hello@example.com?subject=First%20conversation"><span>Get in touch</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h14M11 4l6 6-6 6"/></svg></a>
+    <p class="mono" style="margin-top:14px;color:var(--muted)"><span class="todo">[CHLOE: real email address]</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="mono">
+  <span>&copy; <span id="yr">2026</span> Chloe Couzens</span>
+  <span>Performance coaching for young people</span>
+  <a href="#top">Back to top &uarr;</a>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---------- hero dot field: dots light up when "seen" ---------- */
+  const cv = document.getElementById('field');
+  const ctx = cv.getContext('2d');
+  let W, H, dpr, dots = [], gap;
+  const pointer = { x: -999, y: -999, active: false, t: 0 };
+
+  function build() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    gap = W < 600 ? 22 : 28;
+    dots = [];
+    for (let y = gap / 2; y < H; y += gap)
+      for (let x = gap / 2; x < W; x += gap)
+        dots.push({ x, y, lit: 0, j: Math.random() * Math.PI * 2 });
+    if (reduce) { dots.forEach(d => { if (Math.random() < .05) d.lit = 1; }); draw(0); }
+  }
+
+  function draw(t) {
+    ctx.clearRect(0, 0, W, H);
+    const R = W < 600 ? 90 : 140;
+    for (const d of dots) {
+      if (!reduce) {
+        const dx = d.x - pointer.x, dy = d.y - pointer.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < R) d.lit = Math.min(1, d.lit + (1 - dist / R) * .25);
+        else d.lit *= .985;
+        if (Math.random() < .00004) d.lit = 1; // the odd spark on its own
+      }
+      const l = d.lit;
+      const r = 1.4 + l * 3.6 + (l > .05 ? Math.sin(t / 300 + d.j) * l * .6 : 0);
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, r, 0, Math.PI * 2);
+      if (l < .02) ctx.fillStyle = 'rgba(20,17,15,.16)';
+      else {
+        const g = Math.round(17 + (90 - 17) * l), b = Math.round(15 + (31 - 15) * l), rr = Math.round(20 + (255 - 20) * l);
+        ctx.fillStyle = `rgba(${rr},${g},${b},${.16 + l * .84})`;
+      }
+      ctx.fill();
+    }
+  }
+
+  function loop(t) {
+    if (!pointer.active) { // drift on its own when nobody is pointing (touch, idle)
+      pointer.t += .006;
+      pointer.x = W * (.5 + .38 * Math.sin(pointer.t * 1.3));
+      pointer.y = H * (.5 + .32 * Math.sin(pointer.t * 2.1 + 1));
+    }
+    draw(t);
+    requestAnimationFrame(loop);
+  }
+
+  let idle;
+  const hero = document.querySelector('.hero');
+  hero.addEventListener('pointermove', e => {
+    if (e.pointerType === 'touch') return;
+    const r = cv.getBoundingClientRect();
+    pointer.x = e.clientX - r.left; pointer.y = e.clientY - r.top; pointer.active = true;
+    clearTimeout(idle); idle = setTimeout(() => pointer.active = false, 2500);
+  });
+  hero.addEventListener('pointerleave', () => pointer.active = false);
+  if (matchMedia('(hover: none)').matches)
+    document.getElementById('hintText').textContent = 'Every dot is someone. Watch who lights up.';
+
+  build();
+  addEventListener('resize', () => { clearTimeout(build.t); build.t = setTimeout(build, 150); });
+  if (!reduce) requestAnimationFrame(loop);
+
+  /* ---------- eighteen ticks, one per year ---------- */
+  const ticks = document.querySelector('.ticks');
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('i');
+    s.style.animationDelay = (i * 60) + 'ms';
+    ticks.appendChild(s);
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .1 });
+  document.querySelectorAll('[data-reveal]').forEach((el, i) => {
+    el.style.transitionDelay = (el.parentElement.querySelectorAll('[data-reveal]').length > 1 ? ([...el.parentElement.children].indexOf(el) % 4) * 90 : 0) + 'ms';
+    io.observe(el);
+  });
+
+  /* ---------- who-it's-for rows ---------- */
+  document.querySelectorAll('.rows button').forEach(b => b.addEventListener('click', () => {
+    const li = b.parentElement, open = !li.classList.contains('open');
+    document.querySelectorAll('.rows li').forEach(x => { x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded', 'false'); });
+    if (open) { li.classList.add('open'); b.setAttribute('aria-expanded', 'true'); }
+  }));
+
+  /* ---------- belief line: split into words, glow follows pointer ---------- */
+  const bl = document.getElementById('beliefLine');
+  bl.innerHTML = bl.textContent.split(' ').map(w => `<span class="w">${w}</span>`).join(' ');
+  const belief = document.getElementById('belief'), glow = document.getElementById('glow');
+  belief.addEventListener('pointermove', e => {
+    const r = belief.getBoundingClientRect();
+    glow.style.left = (e.clientX - r.left) + 'px';
+    glow.style.top = (e.clientY - r.top) + 'px';
+  });
+})();
+</script>
+</body>
+</html>
