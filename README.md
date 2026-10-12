@@ -1,6 +1,6 @@
-# chloecouzens.com
+# Chloe Cozens
 
-Single-page site for Chloe Couzens, performance coach for children and young adults.
+Single-page site for Chloe Cozens, performance coach for children and young adults.
 
 Everything lives in `index.html`. It has no build step and no dependencies apart from Google Fonts.
 

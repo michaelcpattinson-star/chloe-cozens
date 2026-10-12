@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chloe Couzens | Performance coach for young people</title>
-<meta name="description" content="Chloe Couzens coaches children and young adults towards high performance by starting with who they are. Former teacher of 18 years, Loughborough graduate, hockey player and Team GB athlete.">
+<title>Chloe Cozens | Performance coach for young people</title>
+<meta name="description" content="Chloe Cozens coaches children and young adults towards high performance by starting with who they are. Former Great Britain heptathlete and javelin thrower, athletics coach, hockey player and teacher of 18 years.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -126,6 +126,11 @@ html.js [data-reveal].in{opacity:1;transform:none}
 .ledger .big.spark{color:var(--spark)}
 .ledger h3{font-size:22px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
 .ledger p{color:#C9C0B4;font-size:16px;max-width:42ch}
+.pbs{grid-column:1 / -1;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:22px}
+.pbs div{background:var(--ink-2);padding:12px 14px;border-top:2px solid var(--spark)}
+.pbs dt{color:#8B8277;font-size:11px;margin-bottom:6px}
+.pbs dd{color:var(--paper);font-size:clamp(16px,1.6vw,22px);font-weight:600;letter-spacing:0}
+.pbs dd+dd{color:#8B8277;font-size:11px;font-weight:400;margin-top:2px}
 .ticks{grid-column:1 / -1;display:grid;grid-template-columns:repeat(18,1fr);gap:4px;margin-top:20px}
 .ticks i{height:28px;background:var(--ink-2);border-radius:2px;transform-origin:bottom;transition:background .3s}
 .ledger li.in .ticks i{background:var(--spark);animation:tick .5s var(--ease) both}
@@ -221,7 +226,7 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
 <body>
 
 <nav class="nav" aria-label="Main">
-  <a class="wordmark" href="#top"><i></i>Chloe Couzens</a>
+  <a class="wordmark" href="#top"><i></i>Chloe Cozens</a>
   <ul class="mono">
     <li><a href="#approach">Approach</a></li>
     <li><a href="#chloe">About</a></li>
@@ -242,7 +247,7 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
   </h1>
   <div class="hero-foot">
     <span class="hint mono"><b></b><span id="hintText">Move your cursor. Watch who lights up.</span></span>
-    <p>Chloe Couzens is a performance coach for children and young adults. She works on the thing underneath the results, which is whether a young person feels properly known.</p>
+    <p>Chloe Cozens is a performance coach for children and young adults. She works on the thing underneath the results, which is whether a young person feels properly known.</p>
     <a class="down" href="#premise" aria-label="Scroll to the next section">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2v14M3 10l6 6 6-6"/></svg>
     </a>
@@ -251,8 +256,8 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
 
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>Eighteen years in the classroom</span><span>Loughborough University</span><span>Hockey</span><span>Team GB</span><span>Performance coach</span><span>Children and young adults</span>
-    <span>Eighteen years in the classroom</span><span>Loughborough University</span><span>Hockey</span><span>Team GB</span><span>Performance coach</span><span>Children and young adults</span>
+    <span>Great Britain athlete</span><span>Heptathlon</span><span>Javelin</span><span>Eighteen years in the classroom</span><span>Athletics coach</span><span>Loughborough University</span><span>Hockey</span><span>Children and young adults</span>
+    <span>Great Britain athlete</span><span>Heptathlon</span><span>Javelin</span><span>Eighteen years in the classroom</span><span>Athletics coach</span><span>Loughborough University</span><span>Hockey</span><span>Children and young adults</span>
   </div>
 </div>
 
@@ -269,7 +274,7 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
   <div class="label mono"><span class="n">02</span><span>Chloe</span></div>
   <div class="intro">
     <h2>She has been the athlete and <em>the teacher.</em></h2>
-    <p>Chloe has seen high performance from both sides. As an athlete she knows what it is like to be pushed, selected, dropped and pushed again. As a teacher she spent eighteen years working out why one bright kid flies while the one next to them stops bothering.</p>
+    <p>Chloe has seen high performance from both sides. She competed for Great Britain as a multi-eventer, so she knows what it is like to be pushed, selected, dropped and pushed again. She has coached athletics as well. And as a teacher she spent eighteen years working out why one bright kid flies while the one next to them stops bothering.</p>
     <p class="muted">Now she coaches young people one to one, and works with the families, schools and clubs around them. <span class="todo">[CHLOE: a line in your own words about why now]</span></p>
   </div>
   <ol class="ledger">
@@ -285,15 +290,34 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
     <li data-reveal>
       <span class="big">GB</span>
       <div>
-        <h3>Team GB athlete</h3>
-        <p>Competed at international level for Great Britain. <span class="todo">[CHLOE: sport, event, years, caps]</span></p>
+        <h3>Great Britain athlete</h3>
+        <p>Represented Great Britain &amp; Northern Ireland in athletics, as a heptathlete and later a javelin thrower. <span class="todo">[CHLOE: which teams and championships, which years]</span></p>
+      </div>
+    </li>
+    <li data-reveal>
+      <span class="big spark">7</span>
+      <div>
+        <h3>Events in a heptathlon</h3>
+        <p>Hurdles, high jump, shot, 200m, long jump, javelin, 800m, over two days. You have to be good at all of them, including the ones you would rather skip.</p>
+      </div>
+      <dl class="pbs mono">
+        <div><dt>High jump</dt><dd>1.80m</dd><dd>1998</dd></div>
+        <div><dt>Javelin</dt><dd>54.62m</dd><dd>2003</dd></div>
+        <div><dt>Heptathlon</dt><dd>5,220</dd><dd>1998</dd></div>
+      </dl>
+    </li>
+    <li data-reveal>
+      <span class="big">26</span>
+      <div>
+        <h3>Years her record stood</h3>
+        <p>As a schoolgirl at Bedford &amp; County AC, Chloe set the club's under-15 pentathlon record. Nobody beat it until 2020.</p>
       </div>
     </li>
     <li data-reveal>
       <span class="big">LU</span>
       <div>
         <h3>Loughborough University</h3>
-        <p>Studied at Loughborough University, a place that takes sport very seriously indeed. <span class="todo">[CHLOE: degree and year]</span></p>
+        <p>Studied at Loughborough, where she threw her javelin best of 54.62m in August 2003. <span class="todo">[CHLOE: degree and year]</span></p>
       </div>
     </li>
     <li data-reveal>
@@ -339,7 +363,7 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
   <ul class="rows">
     <li>
       <button aria-expanded="false"><span class="k">A</span><span class="t">Young athletes</span><span class="plus" aria-hidden="true">+</span></button>
-      <div class="body"><div><p>Talented, training hard and somehow stuck. Or fifteen and already tired of a sport they used to love. Chloe has been that athlete, so she doesn't need it explained.</p></div></div>
+      <div class="body"><div><p>Talented, training hard and somehow stuck. Or fifteen and already tired of a sport they used to love. Chloe was a national-level athlete at that age and has coached them since, so she doesn't need it explained.</p></div></div>
     </li>
     <li>
       <button aria-expanded="false"><span class="k">B</span><span class="t">Students</span><span class="plus" aria-hidden="true">+</span></button>
@@ -365,7 +389,7 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
   <div class="glow" id="glow"></div>
   <div class="label mono" style="position:relative;z-index:1"><span class="n">05</span><span>What sits under all of it</span></div>
   <h2 id="beliefLine">Being seen changes how hard you're willing to try.</h2>
-  <p>Chloe watched this happen in classrooms for eighteen years and felt it herself in a GB shirt. Young people go further for the adults who have bothered to understand them. Her coaching is built around being that adult, for long enough that they learn to do it for themselves.</p>
+  <p>Chloe watched this happen in classrooms for eighteen years and felt it herself in a Great Britain vest. Young people go further for the adults who have bothered to understand them. Her coaching is built around being that adult, for long enough that they learn to do it for themselves.</p>
 </section>
 
 <section class="contact" id="talk">
@@ -382,7 +406,7 @@ footer{padding:28px var(--gutter);display:flex;justify-content:space-between;gap
 </main>
 
 <footer class="mono">
-  <span>&copy; <span id="yr">2026</span> Chloe Couzens</span>
+  <span>&copy; <span id="yr">2026</span> Chloe Cozens</span>
   <span>Performance coaching for young people</span>
   <a href="#top">Back to top &uarr;</a>
 </footer>
